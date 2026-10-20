@@ -1,0 +1,3 @@
+export default function WorkspaceLoading() {
+  return <div aria-label="Loading workspace" aria-busy="true" className="mx-auto w-full max-w-6xl animate-pulse"><div className="mb-7 h-8 w-56 rounded bg-app-line"/><div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_270px]"><section className="space-y-4"><div className="h-48 rounded-xl bg-app-panel"/><div className="grid grid-cols-3 gap-3"><div className="h-24 rounded-xl bg-app-panel"/><div className="h-24 rounded-xl bg-app-panel"/><div className="h-24 rounded-xl bg-app-panel"/></div><div className="h-64 rounded-xl bg-app-panel"/></section><aside className="h-72 rounded-xl bg-app-panel"/></div></div>;
+}

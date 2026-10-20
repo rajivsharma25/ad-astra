@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-app-bg: var(--app-bg);
+  --color-app-panel: var(--app-panel);
+  --color-app-text: var(--app-text);
+  --color-app-muted: var(--app-muted);
+  --color-app-faint: var(--app-faint);
+  --color-app-line: var(--app-line);
+  --color-app-line-strong: var(--app-line-strong);
+  --color-app-accent: var(--app-accent);
+  --color-app-accent-soft: var(--app-accent-soft);
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+}
+
+:root {
+  --app-bg: #fcfbf8;
+  --app-panel: #fff;
+  --app-text: #25251f;
+  --app-muted: #77776f;
+  --app-faint: #a4a39b;
+  --app-line: #ebe9e3;
+  --app-line-strong: #e0ded7;
+  --app-accent: #6457a6;
+  --app-accent-soft: #f1effa;
+  color-scheme: light;
+}
+
+.dark {
+  --app-bg: #171815;
+  --app-panel: #1f201c;
+  --app-text: #eeede6;
+  --app-muted: #a7a69e;
+  --app-faint: #898880;
+  --app-line: #32332e;
+  --app-line-strong: #41423b;
+  --app-accent: #a69ad8;
+  --app-accent-soft: #302d3a;
+  color-scheme: dark;
+}
+
+@layer utilities {
+  .ad-astra-sidebar-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--app-line-strong) transparent;
+  }
+
+  .ad-astra-sidebar-scroll::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .ad-astra-sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .ad-astra-sidebar-scroll::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: var(--app-line-strong);
+    background-clip: content-box;
+  }
+
+  .ad-astra-preview-frame {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(1deg);
+    box-shadow: 0 22px 70px #46412f17;
+  }
+
+  .ad-astra-hero-glow {
+    background: radial-gradient(ellipse, #f1ede3 0%, #f8f6f0 45%, transparent 72%);
+  }
+
+  .ad-astra-paper-illustration {
+    box-shadow: 0 10px 22px #5a45391c;
+    transform: rotate(-2deg);
+  }
+
+  .ad-astra-paper-highlight {
+    background: #f4e4d7;
+  }
+}
+
+.dark .ad-astra-preview-frame {
+  box-shadow: 0 22px 70px #0006;
+}
+
+.dark .ad-astra-hero-glow {
+  background: radial-gradient(ellipse, #49415b80 0%, #302d3a55 45%, transparent 72%);
+}
